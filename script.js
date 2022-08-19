@@ -12,11 +12,11 @@ var special = '"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~';
 
 
 function generatePassword() {
-  var characters = 12;
+  var characters = 128;
   var possible = '';
   var password = '';
 
-  var passwordlength = prompt("Select how many characters, at least 8 up to 12");
+  var passwordlength = prompt("Select how many characters, at least 8 up to 128");
 
 
   var lowerCase = confirm("Would you like to include lower case letters?");
@@ -41,7 +41,7 @@ function generatePassword() {
       password += (possible[randomIndex])
     }
   }
-  
+
   return password;
 }
 
