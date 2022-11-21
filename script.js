@@ -1,7 +1,7 @@
 
 
 
-// Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 
 
@@ -12,7 +12,7 @@ var special = '"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~';
 
 
 function generatePassword() {
-  var characters = 128;
+ // var characters = 128;
   var possible = '';
   var password = '';
 
@@ -32,9 +32,9 @@ function generatePassword() {
   if (number) {
     possible += numbers;
 
-    var special = confirm("Would you like to include special characters?");
-    if (special) {
-      possible += special; //I can't get figure out why it won't generate special characters.
+    var specialChar= confirm("Would you like to include special characters?");
+    if (specialChar) {
+      possible += special; 
     }
     for (var i = 0; i < passwordlength; i++) {
       var randomIndex = Math.floor(Math.random() * possible.length)
