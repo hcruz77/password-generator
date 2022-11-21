@@ -16,6 +16,8 @@ function generatePassword() {
   var possible = '';
   var password = '';
 
+  //these functions create options for characters to be used for password
+
   var passwordlength = prompt("Select how many characters, at least 8 up to 128");
 
 
@@ -36,6 +38,7 @@ function generatePassword() {
     if (specialChar) {
       possible += special; 
     }
+    //randomizes the characters chosen
     for (var i = 0; i < passwordlength; i++) {
       var randomIndex = Math.floor(Math.random() * possible.length)
       password += (possible[randomIndex])
@@ -47,7 +50,7 @@ function generatePassword() {
 
 
 
-// Write password to the #password input
+// Writes password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -56,5 +59,5 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+// Adds event listener to generate button
 generateBtn.addEventListener("click", writePassword);
